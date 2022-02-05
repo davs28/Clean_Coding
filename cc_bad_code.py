@@ -36,3 +36,30 @@ for i in range(1, 28):
 
 Item.delete()
 Stuff.remove()
+
+
+# CHAPTER 3
+
+def Evaluation(car, report):
+    # approve or disapprove
+    car.setPressure(kPaTOpsi(car.getPressure())) # convert kPa to psi
+
+    if ((car.getHorn() and car.getSeatbelt()) and (car.getLight() == 4 and car.getBrakeLight() == 2)
+    and (car.getPressure() >= 32.0 and car.getPressure() <= 35.0) and car.getBrakePad() > 4.0):
+
+        report.setApproved(report.getApproved()+1)
+        print("Message: Car approved.")
+    else:
+        report.setDisapproved(report.getDisapproved()+1)
+        print("Message: Car disapproved.")
+    
+    car.setPressure(psiTOkPa(car.getPressure())) # convert psi back to kPa
+
+    # calculate wheel area
+    car.setWheelDiameter(mmTOcm(car.getWheelDiameter())) # convert mm to cm
+    wheelArea = math.PI * math.pow(car.getWheelDiameter()/2, 2) # calculate wheel area in cm2
+    car.setWheelDiameter(cmTOmm(car.getWheeldiameter())) # convert cm to mm
+
+    if (wheelArea > 50):
+        # increment cars with big wheels
+        report.setBigWheeledCars(report.getBigWheeledCars()+1)
