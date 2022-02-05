@@ -37,3 +37,15 @@ for i in range(1, DAYS_IN_FEBRUARY):
 
 Item.delete()
 Stuff.delete()
+
+
+# CHAPTER 3
+
+def EvaluationReport(car, report):
+    #approve or disapprove
+    evaluate(car)
+    
+    # calculate wheel area
+    wheelArea = calculateWheelArea(car)
+    if (wheelArea > 50):
+        report.setBigWheeledCars(report.getBigWheeledCars()+1)
