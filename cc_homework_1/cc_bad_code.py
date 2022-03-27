@@ -12,7 +12,7 @@ else:
 # AVOID DISINFORMATION
 
 sql = 2
-sqa = 2*2
+sqa = sql*2
 
 # MAKE MEANINGFUL DISTINCTIONS
 

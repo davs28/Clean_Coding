@@ -12,7 +12,7 @@ else:
 # AVOID DISINFORMATION
 
 square_length = 2
-square_area = 2*2
+square_area = square_length*2
 
 # MAKE MEANINGFUL DISTINCTIONS
 
