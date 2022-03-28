@@ -38,17 +38,29 @@ String roomNumber = room.level.number;
 
 // ERROR HANDLING
 
-
-
-
-
 // Use Exceptions Rather Than Return Codes
+public void determineGrade(double grade) throws GradeError{
+  if (grade > 100) || (grade < 0) {
+    throw new GradeError("Grades should be in the range 0-100.")
+  } else {
+    if (grade >= 80) {
+      return 'A';
+    } else if (grade >= 70) {
+      return 'B';
+    } else if (grade >= 60) {
+      return 'C';
+    } else if (grade >= 50) {
+      return 'D';
+    } else {
+      return 'F';
+    }
+  }
+}
 
-// Define Exception Classes in Terms of a Caller's Needs
-
-// Define the Normal Flow
 
 // Don't Return Null
+
+
 
 // Don't Pass Null
 

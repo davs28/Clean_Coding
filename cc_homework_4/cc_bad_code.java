@@ -47,9 +47,24 @@ String roomNumber = room.getLevel().getNumber();
 
 // Use Exceptions Rather Than Return Codes
 
-// Define Exception Classes in Terms of a Caller's Needs
+public void determineGrade(double grade) {
+  if (grade > 100) || (grade < 0) {
+    System.out.println("Grades should be in the range 0-100.");
+  } else {
+    if (grade >= 80) {
+      return 'A';
+    } else if (grade >= 70) {
+      return 'B';
+    } else if (grade >= 60) {
+      return 'C';
+    } else if (grade >= 50) {
+      return 'D';
+    } else if (grade < 50) {
+      return 'F';
+    }
+  }
+}
 
-// Define the Normal Flow
 
 // Don't Return Null
 
